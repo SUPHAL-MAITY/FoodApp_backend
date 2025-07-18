@@ -19,7 +19,7 @@ const app = express()
 // }));
 
 
-const allowedOrigin=process.env.NODE_ENV==="production" ? "https://foodapp-backend-h6eo.onrender.com":"http://localhost:5173"
+const allowedOrigin=process.env.NODE_ENV==="production" ? "https://food-app-frontend-puce.vercel.app":"http://localhost:5173"
 
 ///dev mode
 app.use(cors({
