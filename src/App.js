@@ -18,9 +18,12 @@ const app = express()
 //     credentials: true
 // }));
 
+
+const allowedOrigin=process.env.NODE_ENV==="production" ? "https://foodapp-backend-h6eo.onrender.com":"http://localhost:5173"
+
 ///dev mode
 app.use(cors({
-    origin: 'http://localhost:5173', // The frontend URL
+    origin: allowedOrigin, // The frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: true
 }));
