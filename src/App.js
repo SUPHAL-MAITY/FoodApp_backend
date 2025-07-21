@@ -5,23 +5,11 @@ import cookieParser from "cookie-parser"
 
 const app = express()
 
-// app.use(cors({
-//     origin: process.env.CORS_ORIGIN, 
-//     credentials: true
-// }))
-
-////production
-
-// app.use(cors({
-//     origin: 'https://food-app-delta-ecru.vercel.app', // The frontend URL
-//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-//     credentials: true
-// }));
 
 
 const allowedOrigin=process.env.NODE_ENV==="production" ? "https://food-app-frontend-puce.vercel.app":"http://localhost:5173"
 
-///dev mode
+
 app.use(cors({
     origin: allowedOrigin, // The frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
